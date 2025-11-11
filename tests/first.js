@@ -1,0 +1,1 @@
+await page.goto('https://testautomationpractice.blogspot.com/');
