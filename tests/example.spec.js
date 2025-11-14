@@ -33,4 +33,11 @@ test('is clickable GUI', async ({ page }) => {
 
   // Select country using dropdown.
   await page.getByLabel('Country:').selectOption('germany');
+
+  // Select colours using list.
+  await page.getByLabel('Colors:').selectOption('yellow');
+
+  // Select date using date picker.
+  await page.locator('#datepicker').click();
+  await page.getByRole('link', { name: '21' }).click();
 });
