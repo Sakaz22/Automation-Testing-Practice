@@ -41,3 +41,10 @@ test('is clickable GUI', async ({ page }) => {
   await page.locator('#datepicker').click();
   await page.getByRole('link', { name: '21' }).click();
 });
+
+test('Udemy Courses', async ({ page }) => {
+  await page.goto('https://testautomationpractice.blogspot.com/');
+
+  // Expect a title "to contain" a substring.
+  await page.getByRole('link', { name: 'Udemy Courses' }).click();
+});
